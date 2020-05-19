@@ -1,8 +1,4 @@
-*.pyc
-*~
-/.vscode
+
 __pycache__
 foodenv
 db.sqlite3
-/static
-.DS_Store
