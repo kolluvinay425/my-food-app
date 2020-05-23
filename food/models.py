@@ -11,7 +11,7 @@ class Item(models.Model):
     item_name = models.CharField(max_length=200)
     item_desc = models.CharField(max_length=200)
     item_price = models.IntegerField()
-    item_image = models.ImageField(upload_to='pictures')
+    item_image = models.ImageField(upload_to='media/pictures',default='media/pictures/img-comingsoon.jpg')
 
 
     def get_absolute_url(self):
