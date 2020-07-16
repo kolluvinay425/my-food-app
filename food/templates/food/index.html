@@ -12,6 +12,10 @@
 <body>
     
     {% block body %}
+    <div class="container">
+        <h4 style="top: auto;" >wellcome to vinay foodapp admin panel...please signup and login to create,update and delete the food items</h4>
+        <hr>
+    </div>
 
     {% for item in item_list %}
         <div class="row md-5">
@@ -22,7 +26,7 @@
             </div>
             <div class="col-md-4">
                 <h3>{{ item.item_name }}</h3>
-                <h5>{{ item.item_desc }}</h5>
+                <p>{{ item.item_desc }}</p>
                 <h6>£{{ item.item_price}}</h6>
                 {% if user.is_authenticated %}
                 <a href="{% url 'food:update_item' item.id %}">update</a>
